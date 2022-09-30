@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="form.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="wrapper">
+    
+    
+    
+    <form id="form-validations">
+
+    <div class="noob-div">
+      <h2>New user Signup</h2>
+    </div>
+
+    <div class="input">
+      <input name="username" placeholder="username"></input>
+      <label for="username">Username must be and contain 5 - 12 characters </label>
+    </div>
+
+    <div class="input">
+      <input name="email" placeholder="email"></input>
+      <label for="username">Email must be a valid address, e.g. me@mydomain.com </label>
+    </div>
+
+    <div class="input">
+      <input name="password" type="password"placeholder="password"></input>
+      <label for="username">Password must contain an alphanumeric (@, _ and - are also allowed) and be 8 - 20 characters </label>
+    </div>
+
+    <div class="input">
+      <input name="telephone" placeholder="telephone"></input>
+      <label for="username">Telephone must be a valid UK telephone number ( 11 digits ) </label>
+    </div>
+
+    <div class="input">
+      <input name="slug" placeholder="profile slug"></input>
+      <label for="username">Slug must contain only lowercase letters, numbers and hypens and be 8 - 20 characters</label>
+    </div>
+
+    </form>
+
+  </div>
+  
+
+  <script src="form.js"></script>
+</body>
+</html>

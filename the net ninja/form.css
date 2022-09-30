@@ -1,0 +1,54 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: row;
+  transform: translate(-50%, -50%);
+  padding: 4rem;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  row-gap: 1rem;
+}
+
+.input input{
+  height: 3rem;
+  border-radius: .5rem;
+  border: 3px solid lightgray;
+  outline: none;
+  font-size: 1.5rem;
+  padding-left:  1rem;
+  padding-right:  1rem;
+}
+
+.input input:focus{
+  border: 3px solid gray;
+}
+
+.noob-div{
+  text-align: center;
+}
+
+#submit-btn {
+  font-size: 1.25rem;
+  padding: 1rem 3rem;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+
+.valid {
+  border: 3px solid green !important;
+}
+
+.invalid {
+  border: 3px solid red !important;
+}

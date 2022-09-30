@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      height: 100vh;
+    }
+    .container{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border: 2px solid black;
+      display: flex;
+      transform: translate(-50%, -50%) !important;
+      padding: 3rem;
+      gap: 1;
+      flex-direction: row;
+
+
+    }
+    .input-div{
+      display: flex;
+      flex-direction: column;
+      margin: 2rem;
+    }
+    .btn-submit{
+      display: flex;
+      align-self: center;
+      justify-self: center;
+    }
+    .error-msg{
+      color: red;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <br>
+  <center><h2>Formulaire full regex</h2></center>
+
+  <div class="container">
+
+    <form id="form-regex">
+
+    <div class="error-msg">
+     <p></p>
+    </div>
+
+    <div class="input-div">
+    <label for="name">Name</label>
+    <input id="name"></input>
+    </div>
+    
+    <div class="input-div">
+    <label for="firstname">FirstName</label>
+    <input id="firstname"></input>
+    </div>
+
+    <div class="input-div">
+    <label for="age">Age</label>
+    <input id="age"></input>
+    </div>
+
+    <div class="input-div">
+    <label for="email">Email</label>
+    <input id="email"></input>
+    </div>
+
+    <div class="input-div">
+    <label for="email-confirmation">Email confirmation</label>
+    <input id="email-confirmation"></input>
+    </div>
+
+    <div class="input-div">
+    <label for="password">Password</label>
+    <input id="password"></input>
+    </div>
+
+    <div class="input-div">
+    <label for="password-confirmation">Password confirmation</label>
+    <input id="password-confirmation"></input>
+    </div>
+
+    <div class="input-div">
+    <label for="checkbox-input">Politique de confidentialité</label>
+    <input id="checkbox-input" type="checkbox"></input>
+    </div>
+
+    <div class="input-div">
+    <button type="submit" class="btn-submit">Submit</button>
+    </div>
+
+    </form>
+
+  </div>
+  
+  <script>
+    let form = document.querySelector('#form-regex')
+    let errorDiv = document.querySelector('.error-msg p')
+
+    console.log(errorDiv)
+    
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault()
+
+      // name
+      let name = document.getElementById('name').value // .value will extract the value
+      if ( name.length > 0 ) {
+        console.log('SUCCESS')
+      } else {
+        errorDiv.innerHTML = `name cannot be empty`
+      }
+
+      // firstname
+      let firstname = document.getElementById('firstname').value
+      if ( firstname.length > 0 ) {
+        console.log('SUCCESS')
+      } else {
+        errorDiv.innerHTML = `firstname cannot be empty`
+      }
+      let regex = /[a-zA-Z]{3,}/
+      if (regex.test(firstname)){
+        console.log('SUCCESS')
+      } else {
+        errorDiv.innerHTML = `firstname must contain atleast 3 characters`
+      }
+
+      // email 
+      let email = document.getElementById('email').value
+
+      let emailConfirmation = document.getElementById('email-confirmation').value
+
+      /*
+      let regex3 = /[^-$]/
+      let res = email.match(regex3).input
+      let res2 = emailConfirmation.match(regex3).input
+      console.log(res)
+      console.log(res2)
+      */
+
+
+      // first lets check if the email contains a "@"
+
+      let regexEmail = // 
+
+      
+
+
+
+ 
+
+    })
+
+  </script>
+</body>
+</html>
